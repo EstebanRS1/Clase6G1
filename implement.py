@@ -1,6 +1,6 @@
 from sistemaVet import *
 
-def main():
+def main():# Función principal
     servicio_hospitalario = sistemaV()
     while True:
         menu=int(input('''\nIngrese una opción: 
