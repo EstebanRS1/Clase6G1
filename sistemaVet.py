@@ -1,4 +1,4 @@
-class Mascota:
+class Mascota: #Clase Mascota
     
     def __init__(self):
         self.__nombre= " "
