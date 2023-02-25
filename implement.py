@@ -69,7 +69,7 @@ def main():
                 else:
                     print("La historia clínica ingresada no corresponde con ninguna mascota en el sistema.")
 
-            elif tipo
+            elif tipoV == "canino":
                 fecha = servicio_hospitalario.verFechaIngreso(q)
             
           
