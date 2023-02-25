@@ -33,13 +33,26 @@ def main():
                     lista_med.append(medicamento)
                 
                 mas = Mascota()
-                mas.asignarNombre(nombre)
-                mas.asignarHistoria(historia)
-                mas.asignarPeso(peso)
-                mas.asignarTipo(tipo)
-                mas.asignarFecha(fecha)
-                mas.asignarMedicamento(medicamento)
-                servicio_hospitalario.ingresarMascota(mas)
+
+                if tipo == "felino":
+                    mas.asignarNombre(nombre)
+                    mas.asignarHistoria(historia)
+                    mas.asignarPeso(peso)
+                    mas.asignarTipo(tipo)
+                    mas.asignarFecha(fecha)
+                    mas.asignarMedicamento(medicamento)
+                    servicio_hospitalario.ingresarMascotaF(mas)
+                    print("Mascota ingresada con exito")
+
+                elif tipo == "canino":
+                    mas.asignarNombre(nombre)
+                    mas.asignarHistoria(historia)
+                    mas.asignarPeso(peso)
+                    mas.asignarTipo(tipo)
+                    mas.asignarFecha(fecha)
+                    mas.asignarMedicamento(medicamento)
+                    servicio_hospitalario.ingresarMascotaC(mas)
+                    print("Mascota ingresada con exito")
 
             else:
                 print("Ya existe una mascota con el numero de historia clínica ingresado.") 
@@ -47,11 +60,18 @@ def main():
             
         elif menu==2: # Ver fecha de ingreso
             q = int(input("Ingrese la historia clínica de la mascota: "))
-            fecha = servicio_hospitalario.verFechaIngreso(q)
-            if fecha != None:  
-                print("La fecha de ingreso de la mascota es: " + fecha)
-            else:
-                print("La historia clínica ingresada no corresponde con ninguna mascota en el sistema.")
+            tipoV= input("Ingrese el tipo de mascota (felino o canino): ")
+
+            if tipoV == "felino":
+                fecha = servicio_hospitalario.verFechaIngresoF(q)
+                if fecha != None:  
+                    print("La fecha de ingreso de la mascota es: " + fecha)
+                else:
+                    print("La historia clínica ingresada no corresponde con ninguna mascota en el sistema.")
+
+            elif tipo
+                fecha = servicio_hospitalario.verFechaIngreso(q)
+            
           
         elif menu==3: # Ver número de mascotas en el servicio 
             numero=servicio_hospitalario.verNumeroMascotas()
